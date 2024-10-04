@@ -2,11 +2,12 @@
 
 :root {
   --font-family: "Roboto Condensed", sans-serif;
-  --main-color: #f4f3f1;
-  --text-color: #aaaaaa;
+  --main-color: #dbe2ef;
+  --text-color: #112d4e;
 }
 * {
   transition: all 0.5s;
+  caret-color: var(--text-color);
 }
 
 a {
@@ -14,13 +15,22 @@ a {
   color: inherit;
 }
 
-body {
-  font-family: var(--font-family) !important;
+.form-control:focus {
+  box-shadow: none !important;
+}
+
+.form-control::placeholder {
   color: var(--text-color);
 }
 
+body {
+  font-family: var(--font-family) !important;
+  color: var(--text-color);
+  background-color: #f9f7f7;
+}
+
 body ::selection {
-  background: #96ff03 !important;
+  background: #8fd14f !important;
 }
 img {
   width: 100%;
@@ -55,7 +65,7 @@ img {
 
 .project:hover .image-container img {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
-    rgba(135, 23, 23, 0.855) 0px 18px 36px -18px;
+    rgb(255, 102, 0) 0px 18px 36px -18px;
   transform: translateY(-10%);
 }
 
@@ -63,13 +73,12 @@ img {
   color: #000;
 }
 
-.btn-main{
+.btn-main {
   background-color: var(--main-color);
   color: var(--text-color);
 }
 
-.btn-main:hover{
+.btn-main:hover {
   background-color: var(--text-color);
   color: var(--main-color);
 }
-
